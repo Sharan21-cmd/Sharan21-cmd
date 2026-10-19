@@ -1,97 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="390" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#07111E"/>
-      <stop offset=".58" stop-color="#102438"/>
-      <stop offset="1" stop-color="#091321"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071321"/>
+      <stop offset="55%" stop-color="#102941"/>
+      <stop offset="100%" stop-color="#071321"/>
     </linearGradient>
-    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#83F0E0"/>
-      <stop offset="1" stop-color="#3B9DCE"/>
-    </linearGradient>
-    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFE2A5"/>
-      <stop offset="1" stop-color="#E9AB53"/>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe09a"/>
+      <stop offset="100%" stop-color="#e8a52c"/>
     </linearGradient>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" stroke="#8AA6C0" stroke-opacity=".09"/>
-      <circle cx="0" cy="0" r="1" fill="#83F0E0" fill-opacity=".28"/>
+      <path d="M24 0H0V24" fill="none" stroke="#4d7796" stroke-opacity=".17" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="#67d9e8" fill-opacity=".45"/>
     </pattern>
-    <pattern id="microgrid" width="8" height="8" patternUnits="userSpaceOnUse">
-      <path d="M8 0H0V8" stroke="#83F0E0" stroke-opacity=".12" stroke-width=".5"/>
-    </pattern>
-    <clipPath id="frame">
-      <rect width="1200" height="390" rx="18"/>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip">
+      <rect width="1200" height="360" rx="20"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="390" fill="url(#background)"/>
-    <rect width="1200" height="390" fill="url(#grid)"/>
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
 
-    <!-- Background signal routing -->
-    <g stroke="#4BB6D0" stroke-width="1.2" opacity=".42">
-      <path d="M0 67H110L145 102H225"/>
-      <path d="M0 83H96L126 113H225"/>
-      <path d="M0 285H116L152 249H225"/>
-      <path d="M0 303H95L138 260H225"/>
-      <path d="M960 70H1050L1080 40H1200"/>
-      <path d="M960 88H1030L1070 128H1200"/>
-      <path d="M960 276H1050L1090 236H1200"/>
-      <path d="M960 295H1025L1070 340H1200"/>
+    <!-- Circuit traces -->
+    <g fill="none" stroke="#42c8df" stroke-width="1.5" opacity=".7">
+      <path d="M0 75H135L175 115H300"/>
+      <path d="M0 105H105L150 150H300"/>
+      <path d="M0 270H125L170 225H300"/>
+      <path d="M0 300H95L145 250H300"/>
+      <path d="M880 75H1010L1050 35H1200"/>
+      <path d="M900 100H1040L1090 150H1200"/>
+      <path d="M900 265H1030L1080 220H1200"/>
+      <path d="M900 300H1020L1060 335H1200"/>
+    </g>
+    <g fill="#42c8df" filter="url(#glow)">
+      <circle cx="300" cy="115" r="3"/>
+      <circle cx="300" cy="150" r="3"/>
+      <circle cx="300" cy="225" r="3"/>
+      <circle cx="300" cy="250" r="3"/>
+      <circle cx="1010" cy="75" r="3"/>
+      <circle cx="1040" cy="100" r="3"/>
     </g>
 
-    <!-- Chip: geometric, schematic-inspired, not a stock image -->
-    <g transform="translate(66 103)">
-      <g stroke="url(#amber)" stroke-width="2.4">
-        <path d="M20 0V-17 M44 0V-17 M68 0V-17 M92 0V-17 M116 0V-17 M140 0V-17"/>
-        <path d="M20 164V181 M44 164V181 M68 164V181 M92 164V181 M116 164V181 M140 164V181"/>
-        <path d="M0 20H-17 M0 44H-17 M0 68H-17 M0 92H-17 M0 116H-17 M0 140H-17"/>
-        <path d="M164 20H181 M164 44H181 M164 68H181 M164 92H181 M164 116H181 M164 140H181"/>
+    <!-- Chip illustration -->
+    <g transform="translate(62 92)">
+      <g stroke="url(#gold)" stroke-width="3" stroke-linecap="round">
+        <path d="M18 0V-15 M45 0V-15 M72 0V-15 M99 0V-15 M126 0V-15"/>
+        <path d="M18 170V185 M45 170V185 M72 170V185 M99 170V185 M126 170V185"/>
+        <path d="M0 18H-15 M0 48H-15 M0 78H-15 M0 108H-15 M0 138H-15"/>
+        <path d="M144 18H159 M144 48H159 M144 78H159 M144 108H159 M144 138H159"/>
       </g>
-      <rect width="164" height="164" rx="8" fill="#0A192A" stroke="url(#amber)" stroke-width="1.6"/>
-      <rect x="10" y="10" width="144" height="144" rx="4" fill="url(#microgrid)" stroke="#34536A" stroke-opacity=".7"/>
-      <path d="M32 48H58V35H104V48H132 M32 116H57V129H105V116H132" stroke="#55C9DB" stroke-width="1.5" opacity=".8"/>
-      <circle cx="20" cy="20" r="3" fill="#FFE2A5"/>
-      <text x="82" y="79" text-anchor="middle" fill="#F5F7FA" font-family="monospace" font-size="26" font-weight="700">RTL</text>
-      <path d="M42 91H122" stroke="#E9AB53" stroke-width="2"/>
-      <text x="82" y="108" text-anchor="middle" fill="#83F0E0" font-family="monospace" font-size="9" letter-spacing="2">SILICON</text>
+      <rect x="0" y="0" width="144" height="170" rx="9" fill="#0b1c30" stroke="url(#gold)" stroke-width="2"/>
+      <rect x="9" y="9" width="126" height="152" rx="5" fill="none" stroke="#42617b" stroke-dasharray="3 5"/>
+      <text x="72" y="65" text-anchor="middle" font-family="monospace" font-size="18" fill="#7ce3ef">RTL</text>
+      <text x="72" y="99" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="url(#gold)">SKU</text>
+      <path d="M35 119H109 M45 129H99 M55 139H89" stroke="#42c8df" stroke-width="2" opacity=".85"/>
     </g>
 
-    <!-- Identity -->
-    <text x="290" y="81" fill="#83F0E0" font-family="monospace" font-size="11" letter-spacing="3">ENGINEERING PORTFOLIO / 2026</text>
-    <text x="286" y="145" fill="#F5F7FA" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="-1.4">SHARAN K U</text>
-    <rect x="290" y="163" width="68" height="3" rx="1.5" fill="url(#amber)"/>
-    <text x="290" y="199" fill="#D7E4F0" font-family="Arial, Helvetica, sans-serif" font-size="19">ECE Student  /  Aspiring RTL Design Engineer</text>
-    <text x="290" y="231" fill="#93AFC6" font-family="monospace" font-size="12" letter-spacing="1.1">DIGITAL DESIGN  ·  ASIC  ·  EMBEDDED  ·  PCB</text>
+    <!-- Main identity -->
+    <text x="270" y="88" fill="#7ce3ef" font-family="monospace" font-size="13" letter-spacing="4">ELECTRONICS // DIGITAL DESIGN</text>
+    <text x="265" y="150" fill="#f4f7fb" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="53">SHARAN K U</text>
+    <rect x="268" y="169" width="80" height="3" rx="1.5" fill="url(#gold)"/>
+    <text x="268" y="207" fill="#d9e6f2" font-family="Arial,Helvetica,sans-serif" font-size="20">ECE Student · Aspiring RTL Design Engineer</text>
+    <text x="268" y="240" fill="#94b2cb" font-family="monospace" font-size="14">VERILOG / SYSTEMVERILOG / ASIC / EMBEDDED</text>
 
-    <!-- Technical workbench panel -->
-    <g transform="translate(790 115)">
-      <rect width="344" height="137" rx="9" fill="#081624" stroke="#38546B"/>
-      <path d="M0 29H344" stroke="#38546B"/>
-      <circle cx="15" cy="14" r="3.5" fill="#E6A16A"/>
-      <circle cx="28" cy="14" r="3.5" fill="#E9C67A"/>
-      <circle cx="41" cy="14" r="3.5" fill="#83D9B1"/>
-      <text x="58" y="18" fill="#91AFC5" font-family="monospace" font-size="9">RTL / IMPLEMENTATION LOG</text>
-      <text x="15" y="51" fill="#83F0E0" font-family="monospace" font-size="11">$ synthesize --top design</text>
-      <text x="15" y="73" fill="#E9C67A" font-family="monospace" font-size="11">[ FLOW ] RTL → GDSII</text>
-      <text x="15" y="95" fill="#A6BCD0" font-family="monospace" font-size="10">[ CHECK ] DRC / LVS</text>
-      <text x="15" y="119" fill="#83F0E0" font-family="monospace" font-size="10">status: build · measure · improve</text>
+    <!-- Right-hand terminal -->
+    <g transform="translate(790 122)">
+      <rect width="350" height="124" rx="10" fill="#091827" stroke="#41627d"/>
+      <path d="M0 31H350" stroke="#41627d"/>
+      <circle cx="17" cy="16" r="4" fill="#ef7676"/>
+      <circle cx="31" cy="16" r="4" fill="#edc46c"/>
+      <circle cx="45" cy="16" r="4" fill="#73d8a5"/>
+      <text x="64" y="20" font-family="monospace" font-size="10" fill="#9bb5c9">sharan@silicon:~</text>
+      <text x="17" y="54" font-family="monospace" font-size="12" fill="#7ce3ef">$ build --target=ASIC</text>
+      <text x="17" y="76" font-family="monospace" font-size="12" fill="#e8bd68">[ OK ] RTL → GDSII</text>
+      <text x="17" y="98" font-family="monospace" font-size="12" fill="#9bb5c9">status: learning + building</text>
+      <rect x="17" y="108" width="7" height="9" fill="#7ce3ef">
+        <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
     </g>
 
-    <!-- Signal waveform -->
-    <g transform="translate(290 267)">
-      <text x="0" y="0" fill="#91AFC5" font-family="monospace" font-size="9" letter-spacing="1.5">SIGNAL OBSERVATORY / DIGITAL TIMING</text>
-      <path d="M0 27H30V12H64V27H98V12H132V27H166V12H200V27H234V12H268V27H302V12H336V27H370" stroke="#83F0E0" stroke-width="1.7"/>
-      <path d="M0 46H64V36H132V46H200V36H268V46H336V36H370" stroke="#E9B86B" stroke-width="1.4"/>
-      <path d="M0 60H370" stroke="#36536A" stroke-width=".8" stroke-dasharray="3 5"/>
-      <text x="390" y="20" fill="#83F0E0" font-family="monospace" font-size="10">clk</text>
-      <text x="390" y="44" fill="#E9B86B" font-family="monospace" font-size="10">req / ack</text>
-    </g>
-
-    <!-- Footer -->
-    <path d="M66 345H1134" stroke="#36536A" stroke-width="1"/>
-    <text x="67" y="369" fill="#91AFC5" font-family="monospace" font-size="10" letter-spacing="1.1">DESIGN  /  VERIFY  /  IMPLEMENT  /  LEARN</text>
-    <text x="1133" y="369" text-anchor="end" fill="#83F0E0" font-family="monospace" font-size="10">SILICON OBSERVATORY — 01</text>
+    <!-- Bottom metadata -->
+    <path d="M265 278H1140" stroke="#36546e"/>
+    <text x="268" y="307" font-family="monospace" font-size="12" fill="#e8bd68">01 / RTL</text>
+    <text x="410" y="307" font-family="monospace" font-size="12" fill="#7ce3ef">02 / ASIC</text>
+    <text x="570" y="307" font-family="monospace" font-size="12" fill="#e8bd68">03 / PCB</text>
+    <text x="730" y="307" font-family="monospace" font-size="12" fill="#7ce3ef">04 / EMBEDDED</text>
+    <text x="268" y="337" font-family="monospace" font-size="10" fill="#7895ad">DESIGN. VERIFY. IMPLEMENT. REPEAT.</text>
+    <text x="1138" y="337" text-anchor="end" font-family="monospace" font-size="10" fill="#7895ad">PROFILE REV 01</text>
   </g>
 </svg>
