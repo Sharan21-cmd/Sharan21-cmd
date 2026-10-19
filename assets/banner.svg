@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071321"/>
+      <stop offset="55%" stop-color="#102941"/>
+      <stop offset="100%" stop-color="#071321"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe09a"/>
+      <stop offset="100%" stop-color="#e8a52c"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#4d7796" stroke-opacity=".17" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="#67d9e8" fill-opacity=".45"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip">
+      <rect width="1200" height="360" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+
+    <!-- Circuit traces -->
+    <g fill="none" stroke="#42c8df" stroke-width="1.5" opacity=".7">
+      <path d="M0 75H135L175 115H300"/>
+      <path d="M0 105H105L150 150H300"/>
+      <path d="M0 270H125L170 225H300"/>
+      <path d="M0 300H95L145 250H300"/>
+      <path d="M880 75H1010L1050 35H1200"/>
+      <path d="M900 100H1040L1090 150H1200"/>
+      <path d="M900 265H1030L1080 220H1200"/>
+      <path d="M900 300H1020L1060 335H1200"/>
+    </g>
+    <g fill="#42c8df" filter="url(#glow)">
+      <circle cx="300" cy="115" r="3"/>
+      <circle cx="300" cy="150" r="3"/>
+      <circle cx="300" cy="225" r="3"/>
+      <circle cx="300" cy="250" r="3"/>
+      <circle cx="1010" cy="75" r="3"/>
+      <circle cx="1040" cy="100" r="3"/>
+    </g>
+
+    <!-- Chip illustration -->
+    <g transform="translate(62 92)">
+      <g stroke="url(#gold)" stroke-width="3" stroke-linecap="round">
+        <path d="M18 0V-15 M45 0V-15 M72 0V-15 M99 0V-15 M126 0V-15"/>
+        <path d="M18 170V185 M45 170V185 M72 170V185 M99 170V185 M126 170V185"/>
+        <path d="M0 18H-15 M0 48H-15 M0 78H-15 M0 108H-15 M0 138H-15"/>
+        <path d="M144 18H159 M144 48H159 M144 78H159 M144 108H159 M144 138H159"/>
+      </g>
+      <rect x="0" y="0" width="144" height="170" rx="9" fill="#0b1c30" stroke="url(#gold)" stroke-width="2"/>
+      <rect x="9" y="9" width="126" height="152" rx="5" fill="none" stroke="#42617b" stroke-dasharray="3 5"/>
+      <text x="72" y="65" text-anchor="middle" font-family="monospace" font-size="18" fill="#7ce3ef">RTL</text>
+      <text x="72" y="99" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="url(#gold)">SKU</text>
+      <path d="M35 119H109 M45 129H99 M55 139H89" stroke="#42c8df" stroke-width="2" opacity=".85"/>
+    </g>
+
+    <!-- Main identity -->
+    <text x="270" y="88" fill="#7ce3ef" font-family="monospace" font-size="13" letter-spacing="4">ELECTRONICS // DIGITAL DESIGN</text>
+    <text x="265" y="150" fill="#f4f7fb" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="53">SHARAN K U</text>
+    <rect x="268" y="169" width="80" height="3" rx="1.5" fill="url(#gold)"/>
+    <text x="268" y="207" fill="#d9e6f2" font-family="Arial,Helvetica,sans-serif" font-size="20">ECE Student · Aspiring RTL Design Engineer</text>
+    <text x="268" y="240" fill="#94b2cb" font-family="monospace" font-size="14">VERILOG / SYSTEMVERILOG / ASIC / EMBEDDED</text>
+
+    <!-- Right-hand terminal -->
+    <g transform="translate(790 122)">
+      <rect width="350" height="124" rx="10" fill="#091827" stroke="#41627d"/>
+      <path d="M0 31H350" stroke="#41627d"/>
+      <circle cx="17" cy="16" r="4" fill="#ef7676"/>
+      <circle cx="31" cy="16" r="4" fill="#edc46c"/>
+      <circle cx="45" cy="16" r="4" fill="#73d8a5"/>
+      <text x="64" y="20" font-family="monospace" font-size="10" fill="#9bb5c9">sharan@silicon:~</text>
+      <text x="17" y="54" font-family="monospace" font-size="12" fill="#7ce3ef">$ build --target=ASIC</text>
+      <text x="17" y="76" font-family="monospace" font-size="12" fill="#e8bd68">[ OK ] RTL → GDSII</text>
+      <text x="17" y="98" font-family="monospace" font-size="12" fill="#9bb5c9">status: learning + building</text>
+      <rect x="17" y="108" width="7" height="9" fill="#7ce3ef">
+        <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Bottom metadata -->
+    <path d="M265 278H1140" stroke="#36546e"/>
+    <text x="268" y="307" font-family="monospace" font-size="12" fill="#e8bd68">01 / RTL</text>
+    <text x="410" y="307" font-family="monospace" font-size="12" fill="#7ce3ef">02 / ASIC</text>
+    <text x="570" y="307" font-family="monospace" font-size="12" fill="#e8bd68">03 / PCB</text>
+    <text x="730" y="307" font-family="monospace" font-size="12" fill="#7ce3ef">04 / EMBEDDED</text>
+    <text x="268" y="337" font-family="monospace" font-size="10" fill="#7895ad">DESIGN. VERIFY. IMPLEMENT. REPEAT.</text>
+    <text x="1138" y="337" text-anchor="end" font-family="monospace" font-size="10" fill="#7895ad">PROFILE REV 01</text>
+  </g>
+</svg>
