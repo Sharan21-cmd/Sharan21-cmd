@@ -1,110 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
-  <title id="title">Silicon Observatory banner for SHARAN K U</title>
-  <desc id="desc">A technical banner showing a chip, signal traces, waveform, and identity block.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" fill="none">
   <defs>
-    <style type="text/css"><![CDATA[
-      .bg { fill: #07111E; }
-      .surface { fill: #0D1B2A; stroke: #2B4258; stroke-width:1; }
-      .secondary { fill: #102438; }
-      .text-primary { fill: #F3F6FA; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-      .text-secondary { fill: #9CB1C6; }
-      .signal { stroke: #83F0E0; stroke-width:2; fill:none; stroke-linejoin:round; }
-      .amber { stroke: #E9B86B; fill:none; stroke-width:1.5; }
-      .grid { stroke: rgba(255,255,255,0.03); stroke-width:1; }
-      .chip { fill:#0D1B2A; stroke:#2B4258; stroke-width:2; rx:8; ry:8; }
-    ]]></style>
-    <symbol id="pin" viewBox="0 0 10 4">
-      <rect x="0" y="1" width="10" height="2" fill="#83F0E0"/>
-    </symbol>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111E"/>
+      <stop offset=".58" stop-color="#102438"/>
+      <stop offset="1" stop-color="#091321"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#83F0E0"/>
+      <stop offset="1" stop-color="#3B9DCE"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFE2A5"/>
+      <stop offset="1" stop-color="#E9AB53"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#8AA6C0" stroke-opacity=".09"/>
+      <circle cx="0" cy="0" r="1" fill="#83F0E0" fill-opacity=".28"/>
+    </pattern>
+    <pattern id="microgrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" stroke="#83F0E0" stroke-opacity=".12" stroke-width=".5"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect width="1200" height="390" rx="18"/>
+    </clipPath>
   </defs>
 
-  <!-- Background -->
-  <rect class="bg" x="0" y="0" width="1200" height="390"/>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="390" fill="url(#background)"/>
+    <rect width="1200" height="390" fill="url(#grid)"/>
 
-  <!-- Subtle engineering grid -->
-  <g opacity="0.6">
-    <defs>
-      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M 40 0 L 0 0 0 40" class="grid"/>
-      </pattern>
-    </defs>
-    <rect x="0" y="0" width="1200" height="390" fill="url(#grid)"/>
-  </g>
-
-  <!-- Workbench surface -->
-  <rect x="40" y="240" width="1120" height="110" class="surface" rx="6" ry="6"/>
-
-  <!-- Chip -->
-  <g transform="translate(120,80)">
-    <rect class="chip" x="0" y="0" width="360" height="220" rx="12" ry="12"/>
-    <!-- chip label -->
-    <text x="24" y="36" font-size="20" class="text-primary" font-weight="700">Sharan K U</text>
-    <text x="24" y="60" font-size="12" class="text-secondary">BMS Institute of Technology and Management</text>
-    <text x="24" y="80" font-size="11" class="text-secondary">Design. Verify. Implement. Learn.</text>
-
-    <!-- pins left -->
-    <g transform="translate(-12,20)">
-      <use href="#pin" x="0" y="0"/>
-      <use href="#pin" x="0" y="12"/>
-      <use href="#pin" x="0" y="24"/>
-      <use href="#pin" x="0" y="36"/>
-      <use href="#pin" x="0" y="48"/>
+    <!-- Background signal routing -->
+    <g stroke="#4BB6D0" stroke-width="1.2" opacity=".42">
+      <path d="M0 67H110L145 102H225"/>
+      <path d="M0 83H96L126 113H225"/>
+      <path d="M0 285H116L152 249H225"/>
+      <path d="M0 303H95L138 260H225"/>
+      <path d="M960 70H1050L1080 40H1200"/>
+      <path d="M960 88H1030L1070 128H1200"/>
+      <path d="M960 276H1050L1090 236H1200"/>
+      <path d="M960 295H1025L1070 340H1200"/>
     </g>
 
-    <!-- pins right -->
-    <g transform="translate(362,20)">
-      <use href="#pin" x="0" y="0"/>
-      <use href="#pin" x="0" y="12"/>
-      <use href="#pin" x="0" y="24"/>
-      <use href="#pin" x="0" y="36"/>
-      <use href="#pin" x="0" y="48"/>
+    <!-- Chip: geometric, schematic-inspired, not a stock image -->
+    <g transform="translate(66 103)">
+      <g stroke="url(#amber)" stroke-width="2.4">
+        <path d="M20 0V-17 M44 0V-17 M68 0V-17 M92 0V-17 M116 0V-17 M140 0V-17"/>
+        <path d="M20 164V181 M44 164V181 M68 164V181 M92 164V181 M116 164V181 M140 164V181"/>
+        <path d="M0 20H-17 M0 44H-17 M0 68H-17 M0 92H-17 M0 116H-17 M0 140H-17"/>
+        <path d="M164 20H181 M164 44H181 M164 68H181 M164 92H181 M164 116H181 M164 140H181"/>
+      </g>
+      <rect width="164" height="164" rx="8" fill="#0A192A" stroke="url(#amber)" stroke-width="1.6"/>
+      <rect x="10" y="10" width="144" height="144" rx="4" fill="url(#microgrid)" stroke="#34536A" stroke-opacity=".7"/>
+      <path d="M32 48H58V35H104V48H132 M32 116H57V129H105V116H132" stroke="#55C9DB" stroke-width="1.5" opacity=".8"/>
+      <circle cx="20" cy="20" r="3" fill="#FFE2A5"/>
+      <text x="82" y="79" text-anchor="middle" fill="#F5F7FA" font-family="monospace" font-size="26" font-weight="700">RTL</text>
+      <path d="M42 91H122" stroke="#E9AB53" stroke-width="2"/>
+      <text x="82" y="108" text-anchor="middle" fill="#83F0E0" font-family="monospace" font-size="9" letter-spacing="2">SILICON</text>
     </g>
 
-    <!-- simple floorplan lines -->
-    <rect x="220" y="110" width="110" height="70" fill="#102438" stroke="#2B4258" stroke-width="1" rx="6"/>
-    <text x="232" y="150" class="text-secondary" font-size="10">ALU</text>
-    <rect x="40" y="110" width="140" height="70" fill="#102438" stroke="#2B4258" stroke-width="1" rx="6"/>
-    <text x="60" y="150" class="text-secondary" font-size="10">CTRL</text>
-  </g>
+    <!-- Identity -->
+    <text x="290" y="81" fill="#83F0E0" font-family="monospace" font-size="11" letter-spacing="3">ENGINEERING PORTFOLIO / 2026</text>
+    <text x="286" y="145" fill="#F5F7FA" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="-1.4">SHARAN K U</text>
+    <rect x="290" y="163" width="68" height="3" rx="1.5" fill="url(#amber)"/>
+    <text x="290" y="199" fill="#D7E4F0" font-family="Arial, Helvetica, sans-serif" font-size="19">ECE Student  /  Aspiring RTL Design Engineer</text>
+    <text x="290" y="231" fill="#93AFC6" font-family="monospace" font-size="12" letter-spacing="1.1">DIGITAL DESIGN  ·  ASIC  ·  EMBEDDED  ·  PCB</text>
 
-  <!-- Signal traces -->
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 480 160 C 540 140, 640 140, 700 160" class="signal"/>
-    <path d="M 480 200 C 540 220, 640 220, 700 200" class="amber"/>
-    <!-- traces to workbench -->
-    <path d="M 700 160 L 820 200" stroke="#83F0E0" stroke-width="2"/>
-    <path d="M 700 200 L 820 260" stroke="#E9B86B" stroke-width="1.5"/>
-  </g>
-
-  <!-- Waveform block -->
-  <g transform="translate(820,40)">
-    <rect x="-8" y="-8" width="360" height="120" class="secondary" rx="6" ry="6" stroke="#2B4258"/>
-    <text x="8" y="12" class="text-secondary" font-size="11">Clock / Req / Ack</text>
-
-    <!-- clock -->
-    <g transform="translate(8,28)">
-      <polyline points="0,40 20,0 40,40 60,0 80,40 100,0 120,40" stroke="#83F0E0" stroke-width="2" fill="none"/>
-      <text x="0" y="58" class="text-secondary" font-size="9">clk</text>
+    <!-- Technical workbench panel -->
+    <g transform="translate(790 115)">
+      <rect width="344" height="137" rx="9" fill="#081624" stroke="#38546B"/>
+      <path d="M0 29H344" stroke="#38546B"/>
+      <circle cx="15" cy="14" r="3.5" fill="#E6A16A"/>
+      <circle cx="28" cy="14" r="3.5" fill="#E9C67A"/>
+      <circle cx="41" cy="14" r="3.5" fill="#83D9B1"/>
+      <text x="58" y="18" fill="#91AFC5" font-family="monospace" font-size="9">RTL / IMPLEMENTATION LOG</text>
+      <text x="15" y="51" fill="#83F0E0" font-family="monospace" font-size="11">$ synthesize --top design</text>
+      <text x="15" y="73" fill="#E9C67A" font-family="monospace" font-size="11">[ FLOW ] RTL → GDSII</text>
+      <text x="15" y="95" fill="#A6BCD0" font-family="monospace" font-size="10">[ CHECK ] DRC / LVS</text>
+      <text x="15" y="119" fill="#83F0E0" font-family="monospace" font-size="10">status: build · measure · improve</text>
     </g>
 
-    <!-- req -->
-    <g transform="translate(8,88)">
-      <polyline points="0,40 40,40 40,0 80,0 80,40 120,40" stroke="#E9B86B" stroke-width="2" fill="none"/>
-      <text x="0" y="58" class="text-secondary" font-size="9">req</text>
+    <!-- Signal waveform -->
+    <g transform="translate(290 267)">
+      <text x="0" y="0" fill="#91AFC5" font-family="monospace" font-size="9" letter-spacing="1.5">SIGNAL OBSERVATORY / DIGITAL TIMING</text>
+      <path d="M0 27H30V12H64V27H98V12H132V27H166V12H200V27H234V12H268V27H302V12H336V27H370" stroke="#83F0E0" stroke-width="1.7"/>
+      <path d="M0 46H64V36H132V46H200V36H268V46H336V36H370" stroke="#E9B86B" stroke-width="1.4"/>
+      <path d="M0 60H370" stroke="#36536A" stroke-width=".8" stroke-dasharray="3 5"/>
+      <text x="390" y="20" fill="#83F0E0" font-family="monospace" font-size="10">clk</text>
+      <text x="390" y="44" fill="#E9B86B" font-family="monospace" font-size="10">req / ack</text>
     </g>
 
-    <!-- ack -->
-    <g transform="translate(8,148)">
-      <polyline points="0,40 0,0 40,0 40,40 80,40 80,0 120,0" stroke="#9CB1C6" stroke-width="2" fill="none"/>
-      <text x="0" y="58" class="text-secondary" font-size="9">ack</text>
-    </g>
-  </g>
-
-  <!-- small annotations -->
-  <g class="text-secondary" font-size="10">
-    <text x="60" y="330">ASIC floorplan motif; traces show signal routing and timing relationships.</text>
-    <text x="60" y="345">Colors: cyan = signals; amber = control; secondary = substrate.</text>
+    <!-- Footer -->
+    <path d="M66 345H1134" stroke="#36536A" stroke-width="1"/>
+    <text x="67" y="369" fill="#91AFC5" font-family="monospace" font-size="10" letter-spacing="1.1">DESIGN  /  VERIFY  /  IMPLEMENT  /  LEARN</text>
+    <text x="1133" y="369" text-anchor="end" fill="#83F0E0" font-family="monospace" font-size="10">SILICON OBSERVATORY — 01</text>
   </g>
 </svg>
