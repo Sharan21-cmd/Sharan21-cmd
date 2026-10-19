@@ -1,86 +1,131 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Sharan21-cmd/Sharan21-cmd/main/assets/banner.svg" alt="Sharan K U — RTL, ASIC and embedded engineering" width="100%"/>
+<img src="assets/banner.svg" alt="Sharan K U — Silicon Observatory engineering portfolio" width="100%"/>
 
-# SHARAN K U
+<br/>
 
-### Electronics & Communication Engineering · Aspiring RTL Design Engineer
+### ELECTRONICS · DIGITAL HARDWARE · SILICON IMPLEMENTATION
 
-*From digital logic to physical silicon.*
+**I learn hardware by designing it, testing it, and taking it through implementation.**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Sharan21--cmd-161b22?style=flat-square&logo=github)](https://github.com/Sharan21-cmd)
-[![RTL Design](https://img.shields.io/badge/Focus-RTL%20Design-e8b04a?style=flat-square)](https://github.com/Sharan21-cmd)
-[![ASIC](https://img.shields.io/badge/Focus-ASIC%20Design-42c8df?style=flat-square)](https://github.com/Sharan21-cmd)
-[![PCB](https://img.shields.io/badge/Focus-PCB%20Design-79d6a3?style=flat-square)](https://github.com/Sharan21-cmd)
+[Projects](#selected-engineering-work) · [Technical Stack](#technical-stack) · [Current Direction](#current-direction)
 
 </div>
 
 ---
 
-## `whoami`
+## `01 / Profile`
 
-I'm an ECE student at **BMS Institute of Technology and Management**, building practical skills across digital hardware design and implementation.
+I'm an Electronics and Communication Engineering student at **BMS Institute of Technology and Management**, focused on developing practical skills in RTL design and semiconductor engineering.
 
-My interests include RTL development, digital verification, ASIC physical design, embedded systems, and multilayer PCB design. I enjoy taking a design beyond the code and understanding the steps that turn it into a physical implementation.
+My work spans digital logic, ASIC implementation flows, and multilayer PCB design. I'm particularly interested in understanding the complete path from a hardware description to a verified implementation.
 
 ```systemverilog
-module sharan_ku (
-    output logic digital_design,
-    output logic asic_implementation,
-    output logic hardware_exploration
+module engineering_mindset (
+    input  logic idea,
+    input  logic feedback,
+    output logic improvement
 );
-    assign digital_design       = 1'b1;
-    assign asic_implementation  = 1'b1;
-    assign hardware_exploration = 1'b1;
+    // Iterate, verify, and improve.
+    assign improvement = idea & feedback;
 endmodule
 ```
 
-## `engineering.projects`
+## `02 / Selected Engineering Work`
 
-| Project | What I worked on | Repository |
-|---|---|---|
-| **8-bit ALU ASIC** | RTL design and RTL-to-GDSII implementation flow | [Explore →](https://github.com/Sharan21-cmd/8-bit-ALU-ASIC-Design) |
-| **4-Way Traffic Light Controller** | FSM-based digital controller and ASIC flow | [Explore →](https://github.com/Sharan21-cmd/FSM-Based-4-Way-Traffic-Light-Controller-ASIC) |
-| **UART TX/RX** | UART RTL and ASIC implementation, including LVS checks | [Browse repositories →](https://github.com/Sharan21-cmd?tab=repositories) |
-| **STM32H743I-EVAL2 PCB** | Eight-layer PCB design in Altium Designer | [Explore →](https://github.com/Sharan21-cmd/STM32H743I-EVAL2-8-Layer-PCB-Design) |
+<table>
+<tr>
+<td width="50%" valign="top">
 
-## `toolchain`
+### 01 — 8-bit ALU / ASIC
 
-**Hardware design**  
-`Verilog` · `SystemVerilog` · `Digital Logic` · `FSM` · `UART`
+Arithmetic and logic operations implemented as a digital design, followed by an ASIC implementation flow.
 
-**ASIC implementation**  
-`Yosys` · `OpenLane` · `SkyWater SKY130` · `RTL-to-GDSII`
+**Focus:** RTL · Synthesis · Physical design
 
-**PCB & programming**  
-`Altium Designer` · `C` · `Python` · `Git` · `Linux`
+[↗ Source repository](https://github.com/Sharan21-cmd/8-bit-ALU-ASIC-Design)
 
-## `currently.building`
+</td>
+<td width="50%" valign="top">
 
-- Strengthening RTL design and verification fundamentals.
-- Exploring ASIC implementation, physical verification, and timing concepts.
-- Improving embedded C and microcontroller fundamentals.
-- Building projects that connect theory with measurable engineering results.
+### 02 — Traffic Light Controller
 
-## `github.telemetry`
+An FSM-based four-way traffic controller implemented and taken through an ASIC design flow.
+
+**Focus:** State machines · Control logic · ASIC flow
+
+[↗ Source repository](https://github.com/Sharan21-cmd/FSM-Based-4-Way-Traffic-Light-Controller-ASIC)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 03 — UART TX/RX
+
+UART transmitter and receiver design explored through RTL development and ASIC implementation, including layout verification.
+
+**Focus:** Serial communication · RTL · LVS
+
+[↗ Browse repositories](https://github.com/Sharan21-cmd?tab=repositories)
+
+</td>
+<td width="50%" valign="top">
+
+### 04 — STM32H743I-EVAL2 PCB
+
+An eight-layer PCB design developed in Altium Designer, with attention to schematic connectivity, routing, and design-rule checks.
+
+**Focus:** Multilayer layout · Routing · DRC
+
+[↗ Source repository](https://github.com/Sharan21-cmd/STM32H743I-EVAL2-8-Layer-PCB-Design)
+
+</td>
+</tr>
+</table>
+
+## `03 / Technical Stack`
+
+| Domain | Technologies |
+|---|---|
+| **RTL & Digital Design** | Verilog, SystemVerilog, FSMs, UART |
+| **ASIC Implementation** | Yosys, OpenLane, SKY130, RTL-to-GDSII |
+| **PCB Design** | Altium Designer, multilayer layout, DRC |
+| **Programming** | C, Python |
+| **Development Environment** | Linux, Git |
+
+## `04 / Current Direction`
+
+- Deepen RTL design and digital verification fundamentals.
+- Develop a stronger understanding of timing, constraints, and physical implementation.
+- Improve embedded C and microcontroller fundamentals.
+- Build reproducible engineering projects with clear evidence and documentation.
+
+## `05 / GitHub Telemetry`
 
 <div align="center">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Sharan21-cmd&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" alt="GitHub profile statistics"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sharan21-cmd&layout=compact&hide_border=true&theme=transparent&langs_count=6" alt="Most used programming languages"/>
+<a href="https://github.com/Sharan21-cmd">
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=Sharan21-cmd&show_icons=true&hide_border=true&bg_color=0D1520&title_color=83F0E0&text_color=C6D5E4&icon_color=E9B86B" alt="GitHub statistics"/>
+</a>
+<a href="https://github.com/Sharan21-cmd?tab=repositories">
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sharan21-cmd&layout=compact&hide_border=true&bg_color=0D1520&title_color=83F0E0&text_color=C6D5E4" alt="Most used languages"/>
+</a>
 </div>
 
 <div align="center">
-
-[![Contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=Sharan21-cmd&theme=github-compact&hide_border=true&area=true)](https://github.com/Sharan21-cmd)
-
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sharan21-cmd&bg_color=0D1520&color=C6D5E4&line=83F0E0&point=E9B86B&area=true&hide_border=true" alt="GitHub contribution activity" width="100%"/>
 </div>
 
-## `connect`
+## `06 / Connect`
 
-Want to discuss digital design, semiconductor engineering, or hardware projects? Feel free to explore my repositories and connect.
+I'm interested in learning from engineers and collaborating on meaningful digital hardware, semiconductor, and embedded systems projects.
+
+**Explore the repositories. Follow the implementation. Learn from the iterations.**
 
 <div align="center">
 
-**DESIGN · VERIFY · IMPLEMENT · REPEAT**
+[GitHub — Sharan21-cmd](https://github.com/Sharan21-cmd)
+
+<sub>DESIGN / VERIFY / IMPLEMENT / LEARN</sub>
 
 </div>
